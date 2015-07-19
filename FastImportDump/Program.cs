@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Xml;
-using System.Xml.Linq;
 using System.Collections.Generic;
 using System.Threading;
 using System.Diagnostics;
@@ -152,7 +151,6 @@ namespace FastImportDump
                 exitFlag = true;
             });
 
-            using (exitMonitorTask)
             using (var xr = string.IsNullOrEmpty(sourceXml) ? XmlReader.Create(Console.OpenStandardInput()) : XmlReader.Create(sourceXml))
             {
 

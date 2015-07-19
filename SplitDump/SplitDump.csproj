@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D8AA9586-BF5D-46B9-AEF9-A30E115ED1E0}</ProjectGuid>
+    <ProjectGuid>{65EEDEF5-6310-49A9-8F53-9D82C7A80C66}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FastImportDump</RootNamespace>
-    <AssemblyName>FastImportDump</AssemblyName>
+    <RootNamespace>SplitDump</RootNamespace>
+    <AssemblyName>SplitDump</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -17,9 +17,8 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <ConsolePause>false</ConsolePause>
-    <Commandlineparameters>--help</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>
@@ -41,6 +40,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CommandLineOptions.cs" />
+    <Compile Include="DumpPageFeeder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
